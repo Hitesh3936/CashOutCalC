@@ -21,13 +21,7 @@
     const originalPayoutEl = document.getElementById('original-payout');
     const returnPercentageEl = document.getElementById('return-percentage');
 
-    // Breakdown fields
-    const bdOriginalStake = document.getElementById('bd-original-stake');
-    const bdOriginalOdds = document.getElementById('bd-original-odds');
-    const bdNewOdds = document.getElementById('bd-new-odds');
-    const bdFormula = document.getElementById('bd-formula');
-    const bdCashoutValue = document.getElementById('bd-cashout-value');
-    const bdProfit = document.getElementById('bd-profit');
+
 
     let currentFormat = 'decimal';
 
@@ -167,13 +161,7 @@
         cashoutProfitEl.style.color = profit >= 0 ? 'var(--success)' : 'var(--danger)';
         returnPercentageEl.style.color = returnPct >= 0 ? 'var(--success)' : 'var(--danger)';
 
-        // Breakdown
-        bdOriginalStake.textContent = formatCurrency(stake);
-        bdOriginalOdds.textContent = origOdds.toFixed(2);
-        bdNewOdds.textContent = nOdds.toFixed(2);
-        bdFormula.textContent = `(${formatCurrency(stake)} × ${origOdds.toFixed(2)}) ÷ ${nOdds.toFixed(2)}`;
-        bdCashoutValue.textContent = formatCurrency(cashoutValue);
-        bdProfit.textContent = formatCurrency(profit);
+
 
         // Show results
         resultsPanel.style.display = 'block';
